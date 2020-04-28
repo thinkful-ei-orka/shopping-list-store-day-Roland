@@ -43,7 +43,14 @@ const render = function () {
 };
 
 const addItemToShoppingList = function (itemName) {
-  store.items.push({ id: cuid(), name: itemName, checked: false });
+  try {
+    item.validateName(itemName);
+    const newItem = item.create(itemName);
+    store.items.push(newItem);
+    render();
+  } catch (error) {
+    console.log(`Cannot add item: ${error.message}`);
+  }
 };
 
 const handleNewItemSubmit = function () {
@@ -120,7 +127,7 @@ const handleToggleFilterClick = function () {
 };
 
 const handleEditShoppingItemSubmit = function () {
-  $('.js-shopping-list').on('submit', '.js-edit-item', event => {
+  $('.js-shopping-list').on('change', '.js-edit-item', event => {
     event.preventDefault();
     const id = getItemIdFromElement(event.currentTarget);
     const itemName = $(event.currentTarget).find('.shopping-item').val();
