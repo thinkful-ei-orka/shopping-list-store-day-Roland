@@ -1,0 +1,24 @@
+{
+  "name": "shopping-list-modules-day",
+  "version": "1.0.0",
+  "description": "shopping list app with modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkful-ei-orka/shopping-list-store-day-Roland.git"
+  },
+  "keywords": [
+    "jquery",
+    "modules",
+    "javascript"
+  ],
+  "author": "Roland Dunkerley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkful-ei-orka/shopping-list-store-day-Roland/issues"
+  },
+  "homepage": "https://github.com/thinkful-ei-orka/shopping-list-store-day-Roland#readme"
+}
